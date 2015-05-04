@@ -1,0 +1,23 @@
+{
+    "name": "hidekscorporation/hideks-standard-application",
+    "description": "Standard Application for Hideks Framework 2",
+    "type": "project",
+    "license": "MIT",
+    "keywords": [
+        "framework",
+        "application",
+        "standard",
+        "hideks"
+    ],
+    "homepage": "http://framework.hidekscorp.com/",
+    "authors": [
+        {
+            "name": "Wesckley Uno",
+            "email": "wesckley.uno@hidekscorp.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "hidekscorporation/hideksframework2": "v2.0.0"
+    }
+}

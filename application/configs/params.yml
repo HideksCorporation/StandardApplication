@@ -1,0 +1,9 @@
+namespace: Project
+
+environment: development
+
+timezone: America/Sao_Paulo
+
+connections:
+    production: mysql://username:password@hostname/production_database?charset=utf8
+    development: mysql://username:password@hostname/development_database?charset=utf8

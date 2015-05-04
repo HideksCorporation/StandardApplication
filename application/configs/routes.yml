@@ -1,0 +1,21 @@
+# Home
+home:
+    path: /
+    defaults:
+        _controller: Project\Controllers\HomeController::indexAction
+    methods: [GET]
+    
+# Sample
+samples_list:
+    path: /samples/
+    defaults:
+        _controller: Project\Controllers\SamplesController::listAction
+    methods: [GET]
+samples_get:
+    path: /samples/{title}/{id}/
+    defaults:
+        _controller: Project\Controllers\SamplesController::getAction
+    requirements:
+        title: ([\w-]+)
+        id: (\d+)
+    methods: [GET]
