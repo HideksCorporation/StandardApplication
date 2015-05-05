@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Layers\Models;
+namespace Project\Models;
 
 use ActiveRecord\Model;
 
