@@ -29,7 +29,7 @@ class HomeController extends Controller
             return $response;
         }
         
-        return $this->renderTo('home/index', array(), $response);
+        return $this->renderTo('home/index.html', $response);
     }
     
 }

@@ -11,9 +11,9 @@ class ErrorController extends Controller
     
     public function exceptionAction(FlattenException $exception)
     {
-        return $this->renderTo('error/exception', array(
-            'status_code' => $exception->getStatusCode()
-        ), new Response());
+        $this->view->status_code = $exception->getStatusCode();
+        
+        return $this->renderTo('error/exception.html', new Response());
     }
     
 }
