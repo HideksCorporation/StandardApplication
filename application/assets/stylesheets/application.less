@@ -1,0 +1,67 @@
+@azul-claro: #69f;
+@azul-escuro: #58f;
+
+@cinza-claro: #666;
+@cinza-escuro: #333;
+
+.linear-gradient (@claro, @escuro) {
+    background-color: @claro;
+    background:-webkit-linear-gradient(@claro,@escuro);
+    background:-moz-linear-gradient(@claro,@escuro);
+    background:-o-linear-gradient(@claro,@escuro);
+    background:-ms-linear-gradient(@claro,@escuro);
+    background:linear-gradient(@claro,@escuro);
+}
+
+a {
+    font-weight: bold;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    .linear-gradient(@azul-claro,@azul-escuro);
+    
+    header {
+        .linear-gradient(@cinza-claro, @cinza-escuro);
+        border-bottom: 1px solid #0000FF;
+        
+        h1 {
+            margin: 0px;
+            line-height: 1.5;
+            text-align:left;
+            color:#fff;
+            padding: 10px;
+        }
+    }
+    
+    section {
+        padding-top: 20px;
+        background: #fff;
+        
+        .panel {
+            .jumbotron {
+                margin: 10px; 
+            }
+        }
+        
+        p.center {
+            text-align: center;
+        }
+    }
+    
+    footer {
+        .linear-gradient(@cinza-claro, @cinza-escuro);
+        border-bottom: 1px solid #0000FF;
+        
+        p {
+            color:#FFF;
+            line-height:3;
+            text-align: right;
+            padding:10px;
+            margin: 0px;
+        }
+    }
+}

@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hideks Framework 1.0 Release</title>
+        <title>Hideks Framework Project</title>
         <meta charset="utf-8">
         <meta name="robots" content="noindex, nofollow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="//cdn.hidekscorp.com/stylesheets/welcome/v1/application.css">
+        {% stylesheets assets=[
+            'require vendor/bootstrap.min.css',
+            'require vendor/bootstrap-theme.min.css',
+            'require *'
+        ] %}
+        <link type="text/css" rel="stylesheet" href="{{ asset_url }}">
+        {% endstylesheets %}
     </head>
     <body>
         <header class="container">
@@ -19,7 +23,12 @@
         <footer class="container">
             <p>Powered by <a href="http://hidekscorp.com">Hideks Corporation</a></p>
         </footer>
-        <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        {% javascripts assets=[
+            'require vendor/jquery.min.js',
+            'require vendor/bootstrap.min.js',
+            'require *'
+        ] %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
     </body>
 </html>
