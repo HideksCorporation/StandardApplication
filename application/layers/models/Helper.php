@@ -1,6 +1,6 @@
 <?php
 
-namespace Project\Models;
+namespace Application\Models;
 
 use ActiveRecord\Model;
 
@@ -9,11 +9,11 @@ abstract class Helper extends Model
     
     public static function mostrar($filter)
     {
-        $scene = self::find(self::getOptions($filter));
+        $data = self::find(self::getOptions($filter));
         
-        if(empty($scene)){ return false; }
+        if(empty($data)){ return false; }
         
-        return $scene->to_array();
+        return $data->to_array();
     }
     
     public static function listar($filter, $limit = 10, $offset = 0)

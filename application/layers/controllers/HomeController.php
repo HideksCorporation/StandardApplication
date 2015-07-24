@@ -1,6 +1,6 @@
 <?php
 
-namespace Project\Controllers;
+namespace Application\Controllers;
 
 use Hideks\Controller;
 use Symfony\Component\HttpFoundation\Request;

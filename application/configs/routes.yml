@@ -2,19 +2,19 @@
 home:
     path: /
     defaults:
-        _controller: Project:Home:index
+        _controller: Application:Home:index
     methods: [GET]
     
 # Sample
 samples_list:
     path: /samples/
     defaults:
-        _controller: Project:Samples:list
+        _controller: Application:Samples:list
     methods: [GET]
 samples_get:
     path: /samples/{title}/{id}/
     defaults:
-        _controller: Project:Samples:get
+        _controller: Application:Samples:get
     requirements:
         title: ([\w-]+)
         id: (\d+)
