@@ -3,14 +3,13 @@
 namespace Application\Controllers;
 
 use Hideks\Controller;
-use Symfony\Component\HttpFoundation\Response;
 
 class SamplesController extends Controller
 {
     
     public function listAction()
     {
-        return $this->renderTo('samples/list.html', new Response());
+        return $this->renderTo('samples/list.html');
     }
     
     public function getAction($title, $id)
@@ -19,7 +18,7 @@ class SamplesController extends Controller
         
         $this->view->id = $id;
         
-        return $this->renderTo('samples/get.html', new Response());
+        return $this->renderTo('samples/get.html');
     }
     
 }
